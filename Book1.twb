@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 9300.16.0315.0125                                -->
+<workbook source-build='9.3.0 (9300.16.0315.0125)' source-platform='win' version='9.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='fact_details+ (mysqletl)' inline='true' name='mysql.1rhhmjx152hvqc18131av0y1tfg2' version='9.3'>
+      <connection class='mysql' dbname='mysqletl' odbc-native-protocol='yes' port='3306' server='localhost' source-charset='' username='root'>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[fact_details].[Area_Code]' />
+              <expression op='[area_details].[Area_Code]' />
+            </expression>
+          </clause>
+          <relation name='fact_details' table='[fact_details]' type='table' />
+          <relation name='area_details' table='[area_details]' type='table' />
+        </relation>
+        <cols>
+          <map key='[Area_Code (area_details)]' value='[area_details].[Area_Code]' />
+          <map key='[Area_Code]' value='[fact_details].[Area_Code]' />
+          <map key='[Area_Description]' value='[area_details].[Area_Description]' />
+          <map key='[Case_ID]' value='[fact_details].[Case_ID]' />
+          <map key='[Crime_Code]' value='[fact_details].[Crime_Code]' />
+          <map key='[Fine]' value='[fact_details].[Fine]' />
+          <map key='[Status_Code]' value='[fact_details].[Status_Code]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Case_ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Case_ID]</local-name>
+            <parent-name>[fact_details]</parent-name>
+            <remote-alias>Case_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area_Code</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Area_Code]</local-name>
+            <parent-name>[fact_details]</parent-name>
+            <remote-alias>Area_Code</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status_Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status_Code]</local-name>
+            <parent-name>[fact_details]</parent-name>
+            <remote-alias>Status_Code</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>25</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Crime_Code</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Crime_Code]</local-name>
+            <parent-name>[fact_details]</parent-name>
+            <remote-alias>Crime_Code</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fine</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Fine]</local-name>
+            <parent-name>[fact_details]</parent-name>
+            <remote-alias>Fine</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area_Code</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Area_Code (area_details)]</local-name>
+            <parent-name>[area_details]</parent-name>
+            <remote-alias>Area_Code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area_Description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area_Description]</local-name>
+            <parent-name>[area_details]</parent-name>
+            <remote-alias>Area_Description</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation charset='280' flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Area Code (area details)' datatype='integer' name='[Area_Code (area_details)]' role='dimension' type='ordinal' />
+      <column caption='Area Code' datatype='integer' name='[Area_Code]' role='dimension' type='ordinal' />
+      <column caption='Area Description' datatype='string' name='[Area_Description]' role='dimension' type='nominal' />
+      <column caption='Case ID' datatype='integer' name='[Case_ID]' role='dimension' type='ordinal' />
+      <column caption='Crime Code' datatype='integer' name='[Crime_Code]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Status Code' datatype='string' name='[Status_Code]' role='dimension' type='nominal' />
+      <column-instance column='[Area_Code (area_details)]' derivation='None' name='[none:Area_Code (area_details):ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.6' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Area_Code (area_details):ok]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>6</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_details+ (mysqletl)' name='mysql.1rhhmjx152hvqc18131av0y1tfg2' />
+          </datasources>
+          <datasource-dependencies datasource='mysql.1rhhmjx152hvqc18131av0y1tfg2'>
+            <column caption='Area Code' datatype='integer' name='[Area_Code]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Fine]' role='measure' type='quantitative' />
+            <column-instance column='[Area_Code]' derivation='None' name='[none:Area_Code:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Fine]' derivation='Sum' name='[sum:Fine:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='415' />
+            <format attr='width' value='692' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[mysql.1rhhmjx152hvqc18131av0y1tfg2].[none:Area_Code:ok]' />
+              <wedge-size column='[mysql.1rhhmjx152hvqc18131av0y1tfg2].[sum:Fine:qk]' />
+              <size column='[mysql.1rhhmjx152hvqc18131av0y1tfg2].[sum:Fine:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='28'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='0' param='[mysql.1rhhmjx152hvqc18131av0y1tfg2].[none:Area_Code:ok]' type='color' />
+            <card pane-specification-id='0' param='[mysql.1rhhmjx152hvqc18131av0y1tfg2].[sum:Fine:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[mysql.1rhhmjx152hvqc18131av0y1tfg2].[none:Area_Code (area_details):ok]</field>
+            <field>[mysql.1rhhmjx152hvqc18131av0y1tfg2].[none:Area_Code:ok]</field>
+            <field>[mysql.1rhhmjx152hvqc18131av0y1tfg2].[none:Crime_Code:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
